@@ -6,21 +6,6 @@ ulContainer.insertAdjacentHTML('beforeend', createMarkup(galleryItems));
 ulContainer.addEventListener('click', handelClick);
 
 function createMarkup(arr) {
-  /*
- *   Даний варіант розмітки робить посилання на картинці яке при кліку хоче завантажити картинку
- *    <li class="gallery__item">
-          <a class="gallery__link" href="${original}">
-            <img
-              class="gallery__image"
-              src="${preview}"
-              data-source="${original}"
-              alt="${description}"
-              />
-          </a>
-      </li>
- *   
-*/
-
   return arr
     .map(
       ({ preview, original, description }) =>
@@ -41,6 +26,7 @@ function createMarkup(arr) {
 }
 
 function handelClick(event) {
+  event.preventDefault();
   if (event.target === event.currentTarget) {
     return;
   }
