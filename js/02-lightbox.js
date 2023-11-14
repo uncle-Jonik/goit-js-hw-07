@@ -19,7 +19,7 @@ function createMarkup(arr) {
     .join('');
 }
 
-ulContainer.addEventListener('click', handelClick);
+// ulContainer.addEventListener('click', handelClick);
 
 const lightbox = new SimpleLightbox('.gallery a', {
   /* options */
@@ -27,10 +27,13 @@ const lightbox = new SimpleLightbox('.gallery a', {
   captionDelay: 250,
 });
 
-function handelClick(event) {
-  event.preventDefault();
-  if (event.target === event.currentTarget) {
-    return;
-  }
-}
-lightbox.open();
+// function handelClick(event) {
+//   event.preventDefault();
+//   if (event.target === event.currentTarget) {
+//     return;
+//   }
+// }
+
+// Я не розумію чому потірібно щось передавати в метод ".open()"
+// Дане рішення піддивився в чаті в slack
+lightbox.open(1);
