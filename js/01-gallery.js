@@ -37,6 +37,8 @@ function handelClick(event) {
     ({ original: productId }) => productId === currentProductId
   );
 
+  console.log(product);
+
   const instance = basicLightbox.create(`
     <img src="${product.original}" width="800" height="600">
 `);
